@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Turabo Self</title>
+    
+    <!-- Les moteurs pour lire le JSX -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  
+  <body>
+    <!-- La boîte où le site s'affiche -->
+    <div id="root"></div>
+
+    <!-- Ton code JSX commence ici -->
+    <script type="text/babel">
+      
+      function App() {
+        return (
+          <div style={{ textAlign: "center", marginTop: "100px", fontFamily: "Arial" }}>
+            <h1>Bienvenue sur Turabo Self</h1>
+            <p>Le site est bien en ligne ! Tu peux commencer à écrire ton code JSX ici.</p>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(<App />);
+      
+    </script>
+  </body>
+</html>
