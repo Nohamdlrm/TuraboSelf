@@ -379,3 +379,12 @@ button { font-family: inherit; }
 .legal .box p { color: var(--ink); margin: 0; }
 mark.todo { background: #FFE38A; color: #4A3500; padding: 1px 7px; border-radius: 6px; font-weight: 700; }
 :root[data-theme="dark"] mark.todo { background: #6B5300; color: #FFE9A8; }
+
+/* Boutons et cartes de lien dans les pages de texte */
+.legal a.btn { text-decoration: none; }
+.legal a.btn-primary { color: #fff; }
+.legal a.btn-ghost { color: var(--ink); }
+.legal a.btn-ghost:hover { color: var(--primary); }
+.link-cards { display: grid; gap: 16px; margin: 22px 0 8px; }
+.link-cards .card h3 { font-size: 20px; font-weight: 800; letter-spacing: -0.03em; margin: 0 0 6px; }
+.link-cards .card p { margin: 0 0 16px; }
