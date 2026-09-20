@@ -10,6 +10,9 @@
   /* Adresse qui reçoit les demandes de démo (coupée en deux pour éviter les robots à spam) */
   var TO = ["ce.0067535a", "campus-rosaparks.fr"].join("@");
 
+  /* Formulaire de démo : mettre true le jour de l'ouverture (et mettre à jour la politique de confidentialité). */
+  var DEMO_OPEN = false;
+
   /* PHOTOS DU SELF — intégrées directement dans le code, aucun fichier ni dossier.
      Chaque photo est un texte "data:image/jpeg;base64,...." (6 au maximum, dans l'ordre de la galerie).
      Envoie tes photos à Claude : il les compresse et les place ici. */
@@ -30,6 +33,8 @@
     "g.correct": "Bonne réponse !", "g.wrong": "Raté ! La bonne réponse : "
   };
   var EN = {
+    "nav.work": "How we work", "how.more": "How we work",
+    "demo.closed.t": "Demo coming soon", "demo.closed.p": "The demo form isn't open yet: opening planned for 20/09/2026. In the meantime, find Turabo Self on Discord.", "demo.closed.cta": "Join the Discord",
     "nav.about": "About us", "nav.how": "How it works", "nav.photos": "The canteen", "nav.faq": "FAQ", "nav.cta": "Request a demo",
     "hero.pill": "The connected canteen for your school", "hero.t1": "Lunch,", "hero.t2": "made simple.",
     "hero.lead": "Weekly menu, one-click booking, payment by balance: Turabo Self makes the canteen simple for students, teachers, staff and the kitchen team.",
@@ -313,7 +318,8 @@
 
   /* ------------------------------ Formulaire de démo ------------------------------ */
   function openDemo() {
-    $("#demo-form-view").hidden = false; $("#demo-done").hidden = true; $("#d-err").hidden = true;
+    $("#demo-closed").hidden = DEMO_OPEN;
+    $("#demo-form-view").hidden = !DEMO_OPEN; $("#demo-done").hidden = true; $("#d-err").hidden = true;
     open("demo");
   }
   $$("[data-demo]").forEach(function (b) { b.addEventListener("click", function (e) { e.preventDefault(); openDemo(); }); });
@@ -331,6 +337,7 @@
       prenom: $("#d-prenom").value.trim(), nom: $("#d-nom").value.trim(), email: $("#d-email").value.trim(),
       why: $("#d-why").value.trim(), link: $("#d-link").value.trim()
     };
+    if (!DEMO_OPEN) return;
     if ($("#d-hp").value) return;   // champ piège : seuls les robots le remplissent
     if (!d.prenom || !d.nom || !d.email || !d.why) return showErr(T("demo.err.fill"));
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) return showErr(T("demo.err.email"));
