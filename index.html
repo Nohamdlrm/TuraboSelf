@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Turabo Self — La cantine, simplement</title>
   <meta name="description" content="Turabo Self : la cantine connectée pour les établissements. Menu de la semaine, réservation en un clic, paiement par solde. Projet non ouvert au public." />
-  <meta name="theme-color" content="#F6F3F7" />
+  <meta name="theme-color" content="#E9EDF0" />
   <meta property="og:title" content="Turabo Self — La cantine, simplement" />
   <meta property="og:description" content="La cantine connectée pour les établissements. Projet non ouvert au public." />
   <meta property="og:image" content="logo.png" />
@@ -75,7 +75,7 @@
       <button type="button" data-lang="en" aria-pressed="false">EN</button>
     </div>
     <button class="icon-btn" id="theme" type="button" aria-label="Thème"><svg class="ic"><use href="#i-moon"/></svg></button>
-    <button type="button" class="btn btn-primary btn-sm nav-cta magnet" data-demo data-i18n="nav.cta">Demander une démo</button>
+    <button type="button" class="btn btn-primary btn-sm nav-cta" data-demo data-i18n="nav.cta">Demander une démo</button>
     <button class="icon-btn burger" id="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
   </div>
 </header>
@@ -84,18 +84,16 @@
 
 <!-- ================================== Accueil ================================== -->
 <section class="hero" id="hero">
-  <div class="bg" aria-hidden="true"><i class="facet f1"></i><i class="facet f2"></i><i class="facet f3"></i><i class="facet f4"></i></div>
 
   <div class="wrap hero-grid">
     <div class="hero-text">
-      <p class="pill"><svg class="ic"><use href="#i-sparkles"/></svg><span data-i18n="hero.pill">La cantine connectée pour votre établissement</span></p>
       <h1 class="hero-title">
         <span class="line"><span data-i18n="hero.t1">La cantine,</span></span>
         <span class="line"><span data-i18n="hero.t2">simplement.</span></span>
       </h1>
       <p class="hero-lead" data-i18n="hero.lead">Menu de la semaine, réservation en un clic, paiement par solde : Turabo Self simplifie la cantine pour les élèves, les professeurs, le personnel et l'équipe de cuisine.</p>
       <div class="hero-cta">
-        <button type="button" class="btn btn-primary btn-lg magnet" data-demo><span data-i18n="hero.cta1">Demander une démo</span><svg class="ic"><use href="#i-arrow"/></svg></button>
+        <button type="button" class="btn btn-primary btn-lg" data-demo><span data-i18n="hero.cta1">Demander une démo</span></button>
         <a class="btn btn-ghost btn-lg" href="#about" data-i18n="hero.cta2">Découvrir</a>
       </div>
       <ul class="hero-chips">
@@ -107,8 +105,6 @@
 
     <div class="hero-art" id="art">
       <div class="birdbox" id="bird" role="img" aria-label="Colibri Turabo Self">
-        <div class="par ghost g2"><img src="logo.png" alt="" draggable="false" /></div>
-        <div class="par ghost g1"><img src="logo.png" alt="" draggable="false" /></div>
         <div class="par main"><img src="logo.png" alt="" draggable="false" /></div>
       </div>
 
@@ -123,8 +119,6 @@
       </aside>
     </div>
   </div>
-
-  <a class="scroll-hint" href="#about" aria-label="Défiler"><i></i></a>
 </section>
 
 <!-- Bandeau qui défile -->
@@ -192,7 +186,7 @@
       <li class="step rv" style="--d:.2s"><span class="n">3</span><span class="tile"><svg class="ic"><use href="#i-coin"/></svg></span><h3 data-i18n="st3.t">Réservation et paiement</h3><p data-i18n="st3.p">Un clic, et le prix du repas est débité du solde.</p></li>
       <li class="step rv" style="--d:.3s"><span class="n">4</span><span class="tile"><svg class="ic"><use href="#i-mail"/></svg></span><h3 data-i18n="st4.t">Confirmation</h3><p data-i18n="st4.p">Un e-mail de confirmation et une notification dans l'application.</p></li>
     </ol>
-    <p class="rv" style="text-align:center;margin-top:34px"><a class="btn btn-ghost" href="fonctionnement.html"><span data-i18n="how.more">Notre fonctionnement</span><svg class="ic"><use href="#i-arrow"/></svg></a></p>
+    <p class="rv" style="margin-top:28px"><a class="btn btn-ghost" href="fonctionnement.html"><span data-i18n="how.more">Notre fonctionnement</span></a></p>
   </div>
 </section>
 
@@ -203,7 +197,7 @@
       <div class="games-text">
         <h2 class="h2" data-i18n="g.title">Gagne ton repas en jouant</h2>
         <p data-i18n="g.p">Les élèves gagnent du solde à chaque mini-jeu réussi, dans la limite de quelques victoires par jour. Essayez : c'est jouable ici, tout de suite.</p>
-        <button type="button" class="btn btn-light magnet" data-game="quiz"><span data-i18n="g.cta">Essayer</span><svg class="ic"><use href="#i-arrow"/></svg></button>
+        <button type="button" class="btn btn-light" data-game="quiz"><span data-i18n="g.cta">Essayer</span></button>
       </div>
       <div class="games-tiles">
         <button type="button" class="gt" data-game="quiz"><svg class="ic"><use href="#i-brain"/></svg><b data-i18n="g.a">Quiz express</b></button>
@@ -258,7 +252,7 @@
       <div>
         <h2 class="h2" data-i18n="fin.title">Prêt(e) à simplifier votre cantine ?</h2>
         <p data-i18n="fin.p">Turabo Self n'est pas encore ouvert au public. Retrouvez-nous sur Discord.</p>
-        <button type="button" class="btn btn-light btn-lg magnet" data-demo><span data-i18n="fin.cta">Demander une démo</span><svg class="ic"><use href="#i-arrow"/></svg></button>
+        <button type="button" class="btn btn-light btn-lg" data-demo><span data-i18n="fin.cta">Demander une démo</span></button>
       </div>
     </div>
   </div>
@@ -312,7 +306,7 @@
         <label class="f"><span data-i18n="demo.link">Lien de votre serveur Discord ou de votre site web</span><input id="d-link" autocomplete="url" maxlength="200" /></label>
         <input class="hp" id="d-hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <p class="f-err" id="d-err" role="alert" hidden></p>
-        <button class="btn btn-primary btn-lg w100" id="d-send" type="submit"><span data-i18n="demo.send">Envoyer ma demande</span><svg class="ic"><use href="#i-arrow"/></svg></button>
+        <button class="btn btn-primary btn-lg w100" id="d-send" type="submit"><span data-i18n="demo.send">Envoyer ma demande</span></button>
         <p class="f-note" data-i18n="demo.privacy">Vos données servent uniquement à répondre à votre demande. <a href="confidentialite.html" target="_blank" rel="noopener">Politique de confidentialité</a></p>
       </form>
     </div>
