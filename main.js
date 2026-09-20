@@ -10,7 +10,7 @@
   /* Adresse qui reçoit les demandes de démo (coupée en deux pour éviter les robots à spam) */
   var TO = ["ce.0067535a", "campus-rosaparks.fr"].join("@");
 
-  /* Formulaire de démo : mettre true le jour de l'ouverture (et mettre à jour la politique de confidentialité). */
+  /* Formulaire de démo : mettre true si le formulaire ouvre un jour (et mettre à jour la politique de confidentialité). */
   var DEMO_OPEN = false;
 
   /* PHOTOS DU SELF — intégrées directement dans le code, aucun fichier ni dossier.
@@ -34,7 +34,7 @@
   };
   var EN = {
     "nav.work": "How we work", "how.more": "How we work",
-    "demo.closed.t": "Demo coming soon", "demo.closed.p": "The demo form isn't open yet: opening planned for 20/09/2026. In the meantime, find Turabo Self on Discord.", "demo.closed.cta": "Join the Discord",
+    "demo.closed.t": "Not open to the public yet", "demo.closed.p": "Turabo Self isn't open to the public: the demo form is closed. A public release is planned for later, maybe in about 3 years, with no commitment. In the meantime, find us on Discord.", "demo.closed.cta": "Join the Discord",
     "nav.about": "About us", "nav.how": "How it works", "nav.photos": "The canteen", "nav.faq": "FAQ", "nav.cta": "Request a demo",
     "hero.pill": "The connected canteen for your school", "hero.t1": "Lunch,", "hero.t2": "made simple.",
     "hero.lead": "Weekly menu, one-click booking, payment by balance: Turabo Self makes the canteen simple for students, teachers, staff and the kitchen team.",
@@ -61,14 +61,14 @@
     "g.title": "Win your lunch by playing", "g.p": "Students earn balance for every mini-game they complete, up to a few wins a day. Try it: it's playable right here, right now.", "g.cta": "Try it", "g.a": "Quick quiz", "g.c": "Reflex",
     "ph.title": "The canteen in pictures", "ph.sub": "A peek at the dining room, the dishes and the team.",
     "ph.1": "The dining room", "ph.2": "The counter", "ph.3": "Dishes of the day", "ph.4": "The kitchen team", "ph.5": "The desserts", "ph.6": "Lunchtime atmosphere",
-    "faq.title": "Frequently asked questions", "faq.sub": "Another question? Request a demo and we'll answer by email.",
+    "faq.title": "Frequently asked questions", "faq.sub": "Another question? Find us on Discord or write to us by email.",
     "q1": "How do users sign in?", "a1": "With their Discord account: they click “Continue with Discord” and their role (student, teacher, staff) is recognised automatically from the school's Discord server. The first time, a short form asks for name, first name and class or subject.",
     "q2": "What does “Request not accepted” mean?", "a2": "The Discord account isn't on the school's server, or has no recognised role. The school's administration can fix that.",
     "q3": "How does payment work?", "a3": "Everyone has a balance. Booking a meal takes the meal price from that balance. The balance is managed by the administration, and students can also earn some with the mini-games.",
-    "q4": "How do I get Turabo Self for my school?", "a4": "Click “Request a demo” and fill in the short form: who you are, why you're interested and the link to your Discord server or website. We answer by email.",
+    "q4": "How do I get Turabo Self for my school?", "a4": "Turabo Self isn't open to the public: it is only used on the Campus Rosa Parks Discord server, and the demo form is closed. A public release is planned for later, maybe in about 3 years, with no commitment.",
     "q5": "Does everyone get a confirmation?", "a5": "Yes. If an email address was provided, a message is sent for every booking. Notifications are also available in the app.",
     "q6": "Which languages does the site support?", "a6": "French and English. The FR | EN button changes the language at any time.",
-    "fin.title": "Ready to simplify your canteen?", "fin.p": "Request a demo: we'll get back to you by email.", "fin.cta": "Request a demo",
+    "fin.title": "Ready to simplify your canteen?", "fin.p": "Turabo Self isn't open to the public yet. Find us on Discord.", "fin.cta": "Request a demo",
     "foot.tag": "Lunch, made simple.", "foot.note": "Turabo Self",
     "demo.title": "Request a demo", "demo.sub": "Tell us who you are: we'll answer by email.",
     "demo.first": "First name", "demo.last": "Last name", "demo.email": "Email address",
