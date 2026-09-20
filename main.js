@@ -158,7 +158,7 @@
     var dark = document.documentElement.getAttribute("data-theme") === "dark";
     $("#theme use").setAttribute("href", dark ? "#i-sun" : "#i-moon");
     $("#theme").setAttribute("aria-label", dark ? (lang === "en" ? "Switch to light mode" : "Passer en mode clair") : (lang === "en" ? "Switch to dark mode" : "Passer en mode sombre"));
-    var m = $('meta[name="theme-color"]'); if (m) m.setAttribute("content", dark ? "#130E19" : "#F6F3F7");
+    var m = $('meta[name="theme-color"]'); if (m) m.setAttribute("content", dark ? "#161A1F" : "#E9EDF0");
   }
   $("#theme").addEventListener("click", function () {
     var dark = document.documentElement.getAttribute("data-theme") === "dark";
@@ -242,8 +242,6 @@
       var r = hero.getBoundingClientRect();
       hero.style.setProperty("--mx", (((e.clientX - r.left) / r.width - 0.5) * 2).toFixed(3));
       hero.style.setProperty("--my", (((e.clientY - r.top) / r.height - 0.5) * 2).toFixed(3));
-      var now = performance.now();
-      if (!touch && now - lastTrail > 90) { lastTrail = now; petal(e.clientX, e.clientY, COLORS[Math.floor(Math.random() * COLORS.length)], 9, 900, 26, 40); }
     }, { passive: true });
   }
   var bird = $("#bird");
@@ -251,26 +249,6 @@
     bird.classList.remove("flap"); void bird.offsetWidth; bird.classList.add("flap");
     burst(e.clientX, e.clientY, 14);
   });
-
-  /* ----------------- Cartes qui s'inclinent + boutons « aimants » ----------------- */
-  if (!reduce && !touch) {
-    $$(".card, .stat").forEach(function (c) {
-      c.addEventListener("pointermove", function (e) {
-        var r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
-        c.style.transition = "transform .12s ease-out";
-        c.style.transform = "perspective(800px) rotateX(" + (-y * 9).toFixed(2) + "deg) rotateY(" + (x * 11).toFixed(2) + "deg) translateY(-6px)";
-      });
-      c.addEventListener("pointerleave", function () { c.style.transition = ""; c.style.transform = ""; });
-    });
-    $$(".magnet").forEach(function (b) {
-      b.style.transition = "translate .25s var(--ease), transform .2s var(--ease), box-shadow .2s";
-      b.addEventListener("pointermove", function (e) {
-        var r = b.getBoundingClientRect();
-        b.style.translate = ((e.clientX - r.left - r.width / 2) * 0.22).toFixed(1) + "px " + ((e.clientY - r.top - r.height / 2) * 0.32).toFixed(1) + "px";
-      });
-      b.addEventListener("pointerleave", function () { b.style.translate = ""; });
-    });
-  }
 
   /* -------------- Carte « exemple de menu » : les plats changent tout seuls -------------- */
   var mi = 0, mcTimers = [];
